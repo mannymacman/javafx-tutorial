@@ -1,12 +1,22 @@
+import java.util.ArrayList;
+
 public class Duke {
-    public static void main(String[] args) {
-        System.out.println("Hello!");
+
+    private String commandType;
+    private ArrayList<Task> tasks;
+
+    public String getResponse(String input) {
+        try {
+            Command c = Parser.parse(input);
+            c.execute(tasks);
+            commandType = c.commandType;
+            return c.getString();
+        } catch (Exception e) {
+            return "Error: " + e.getMessage();
+        }
+    }
+    public String getCommandType() {
+        return commandType;
     }
 
-    /**
-     * Generates a response for the user's chat message.
-     */
-    public String getResponse(String input) {
-        return "Duke heard: " + input;
-    }
 }

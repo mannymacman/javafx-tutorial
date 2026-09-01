@@ -3,8 +3,6 @@
     -fx-border-width: 2px;
     -fx-background-radius: 1em 1em 0 1em;
     -fx-border-radius: 1em 1em 0 1em;
-    -fx-text-fill: rgb(247, 124, 146) /* Light pinkish red color */
-    -fx-background-color: rgba(0, 0, 0, 0.5) /* Black with opacity of 0.5 */
 }
 
 .reply-label {
@@ -27,4 +25,16 @@
 .reply-label {
     -fx-background-radius: 1em 1em 1em 0;
     -fx-border-radius: 1em 1em 1em 0;
+}
+
+.add-label {
+    -fx-background-color: yellow;
+}
+
+.marked-label {
+    -fx-background-color: palegreen;
+}
+
+.delete-label {
+    -fx-background-color: lightpink;
 }
